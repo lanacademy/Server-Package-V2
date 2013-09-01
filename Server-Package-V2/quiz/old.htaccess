@@ -1,0 +1,59 @@
+# Error Pages
+
+ErrorDocument 404 "File not found"
+
+
+# Templates
+
+HeaderName /quiz/etc/header.html
+ReadmeName /quiz/etc/footer.html
+IndexIgnore header.html footer.html etc
+
+
+# Functionality
+
+AddHandler server-parsed shtml
+Options +Indexes
+Options +IncludesNOEXEC
+
+
+# Listing Settings
+
+IndexOptions +FancyIndexing +ScanHTMLTitles +SuppressHTMLPreamble +TrackModified +XHTML
+IndexOptions +NameWidth=* +SuppressLastModified +SuppressDescription +IconsAreLinks +HTMLTable +SuppressColumnSorting +SuppressSize
+IndexOrderDefault Ascending Name
+
+# Custom Descriptions
+
+AddDescription "Please read me first :)" README
+AddDescription "You're not supposed to see this file." header.html
+
+
+# Icons
+
+AddIconByEncoding (CMP,/etc/icons/compressed.png) x-compress x-gzip
+AddIconByType (TXT,/etc/icons/text.png) text/*
+AddIconByType (IMG,/etc/icons/image.png) image/*
+AddIconByType (SND,/etc/icons/sound.png) audio/*
+AddIconByType (VID,/etc/icons/movie.png) video/*
+
+#AddIcon /etc/icons/binary.gif .bin .exe
+#AddIcon /etc/icons/binhex.gif .hqx
+#AddIcon /etc/icons/tar.gif .tar
+#AddIcon /etc/icons/world2.gif .wrl .wrl.gz .vrml .vrm .iv
+#AddIcon /etc/icons/compressed.gif .Z .z .tgz .gz .zip
+#AddIcon /etc/icons/a.gif .ps .ai .eps
+#AddIcon /etc/icons/layout.gif .html .shtml .htm .pdf
+#AddIcon /etc/icons/text.gif .txt
+#AddIcon /etc/icons/c.gif .c
+#AddIcon /etc/icons/p.gif .pl .py
+#AddIcon /etc/icons/f.gif .for
+#AddIcon /etc/icons/dvi.gif .dvi
+#AddIcon /etc/icons/uuencoded.gif .uu
+#AddIcon /etc/icons/script.gif .conf .sh .shar .csh .ksh .tcl
+#AddIcon /etc/icons/tex.gif .tex
+#AddIcon /etc/icons/bomb.gif core
+
+AddIcon /etc/icons/back.png ..
+AddIcon /etc/icons/readme.png README
+AddIcon /etc/icons/folder.png ^^DIRECTORY^^

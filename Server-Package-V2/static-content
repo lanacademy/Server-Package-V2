@@ -1,0 +1,8 @@
+There should be a symbolic link in this directory. 
+
+ln -s /home/ted/static/ /var/www/static
+
+Remember /home/ted/static should have the permissions:
+chmod -r 755 /home/ted/static/
+
+(Permissions should already be set, but if not that should work. If it doesn't try 777, but note this is a security risk to say the least.)
